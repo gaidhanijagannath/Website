@@ -90,8 +90,9 @@ nav ul li a.active {
 }
 
 nav ul li a.current:hover {
-  border: white 1px solid;
-  border-radius: 6px;
+  background: white;
+  color: black;
+  border-radius:2px;
 }
 
 nav ul li ul li a.current:hover {
