@@ -1,7 +1,13 @@
-$(window).on('scroll',function(){
-  if($(window).scrollTop()){
-    $('.mynav').addClass('black');
-  }else{
-    $('.mynav').removeClass('black');
-  }
+// nav bar
+$(document).ready(function(){
+
+  $(window).on('scroll',function(){
+    if($(window).scrollTop()){
+      $('.mynav').addClass('black');
+      $('.mynav').slideDown();
+    }else{
+      $('.mynav').removeClass('black');
+
+    }
+  });
 });
