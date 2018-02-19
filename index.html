@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> The BrownWood Restaurant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Patua+One|Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Patua+One|Quicksand|Arizonia|Slabo+27px" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -16,12 +16,10 @@
 
 <body>
   <div class="wrapper">
-
-    <!-- ............................image_section............................. -->
+    <!-- ............................background_section............................. -->
     <section class="sec-1">
-      <div class="showcase"></div>
-      <nav id="slide_nav" class="mynav">
-        <div class="logo">The BrownWood Restaurant</div>
+      <nav id="slide_nav" class="mynav black">
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
         <ul>
           <li><a class="current" href="#home">Home</a></li>
 
@@ -48,11 +46,60 @@
         </ul>
       </nav>
 
-      <div id="home_image" class="tagline">
-        <p>We speak the good food language.</p>
-        <a href=".box" class="button">I'm Hungry</a>
-        <a href=".box1" class="button1">Order Here!</a>
+<div class="background">
+  <div class="wrap">
+  <div id="slider">
+    <div class="slide slide1 ">
+      <div class="slide-content">
+        <div class="display_content">
+           <h3 class="text-white">Welcome To</h3>
+           <h1 class="text-white">Hangout Restaurant</h1>
+           <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
+          <div class="btn_group">
+              <a href="#" class="default_btn">I'am Hungry</a>
+              <a href="#" class="default_btn">Order Here!</a>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="slide slide2 ">
+      <div class="slide-content">
+        <div class="display_content">
+           <h3 class="text-white">Welcome To</h3>
+           <h1 class="text-white">Hangout Restaurant</h1>
+           <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
+          <div class="btn_group">
+              <a href="#" class="default_btn">I'am Hungry</a>
+              <a href="#" class="default_btn">Order Here!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide3 ">
+      <div class="slide-content">
+        <div class="display_content">
+           <h3 class="text-white">Welcome To</h3>
+           <h1 class="text-white">Hangout Restaurant</h1>
+           <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
+          <div class="btn_group">
+              <a href="#" class="default_btn">I'am Hungry</a>
+              <a href="#" class="default_btn">Order Here!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dot_row" style="text-align:center">
+    <span class="dot" ></span> 
+    <span class="dot" ></span> 
+    <span class="dot" ></span> 
+  </div>
+  <div id="arrow-left" class="prev">&#8249;</div>
+  <div id="arrow-right" class="next">&#8250;</div>
+</div>
+
+</div>
+
 
     </section>
 
@@ -68,20 +115,14 @@
         </div>
         <div class="inner_about_section2">
           <div class="about_images">
-            <img src="/img/about-bg-1.jpg" alt="img" class="about_img_1">
-            <img src="/img/about-bg-2.jpg" alt="img" class="about_img_2">
+            <img src="img/about-bg-1.jpg" alt="img" class="about_img_1">
+            <img src="img/about-bg-2.jpg" alt="img" class="about_img_2">
           </div>
 
         </div>
       </div>
-      <div class="inner_about_section">
+    </section>
 
-      </div>
-
-  </div>
-
-
-  </section>
 
   <!--........................reservation_section......................... -->
 
@@ -205,10 +246,8 @@
       </div>
     </div>
 
-
   </footer>
-
-  </div>
+</div>
 
   <!-- javascript files -->
   <script type="text/javascript" src="index.js">
