@@ -1,22 +1,14 @@
-$(document).ready(function(e) {
-  $("nav").before($(".mynav").clone().addClass("fixed"));
-  $(window).on('scroll', function() {
-
-    if ($(window).scrollTop() >= 250) {
-      $('.mynav.fixed').addClass('slideDown');
-
-    } else {
-      $('.mynav.fixed').removeClass('slideDown');
-    }
-    
-  });
-});
+// -------------------------------------------------------------------------------------------------------
+                             // BACKGROUND SLIDE SHOW //
+// --------------------------------------------------------------------------------------------------------
 
 var sliderImages = document.querySelectorAll('.slide'),
  	arrowRight = document.querySelector('#arrow-right'), 
  	arrowLeft = document.querySelector('#arrow-left'),
  	dots = document.getElementsByClassName('dot'),
-	slideIndex = 0;
+ 	testimonial_text = document.querySelectorAll('.testimonial_item'),
+	slideIndex = -1,
+	testimonialIndex =-1;
 
 // set to normal before every display	
 function Reset(){ 
@@ -28,10 +20,38 @@ function Reset(){
 }
 
 
+// function testimonialReset(){
+// 	for (var i = testimonial_text.length - 1; i >= 0; i--) {
+// 		testimonial_text[i].style.display='none';
+// 	}
+// }
+// function startTestimonialSlide(){
+// 	testimonialReset();
+// 	testimonial_text[0].style.display='block';
+
+// }
+
+// function showTestimonialSlides() {
+//    	testimonialReset();
+//    	testimonialIndex++;
+//     if (testimonialIndex >= (testimonial_text.length)) {testimonialIndex = 0;}
+//     testimonial_text[testimonialIndex].style.display='block';
+//     testimonial_text[testimonialIndex].className += ' animated slideInRight';
+//     // testimonial_text[testimonialIndex].className += ' slideOutLeft';
+//     // console.log(testimonial_text[testimonialIndex].className);
+//     setTimeout(function(){
+//     	 testimonial_text[testimonialIndex].className += ' animated slideOutLeft';
+//     	 setTimeout(showTestimonialSlides, 2000); // Change image every 4 seconds
+
+//     },2000);
+// }
+
+
 //init with start image
 function startSlide(){
     Reset();
     sliderImages[0].style.display='block';
+
 }
 
 
@@ -70,9 +90,11 @@ arrowLeft.addEventListener('click',function(){
 
 // call to initialize
 startSlide();
+// startTestimonialSlide();
 
 //for sldieshow
 showSlides();
+// showTestimonialSlides();
 
 function showSlides() {
    	Reset();
@@ -84,6 +106,3 @@ function showSlides() {
     // slideIndex++;
     setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
-
-
-

@@ -5,28 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> The BrownWood Restaurant</title>
+  <title>Hangout</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon1.png">
+  <!-- google fonts and icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Patua+One|Quicksand|Arizonia|Slabo+27px" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- jquery extension  -->
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <!-- // Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- css files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
 
 
 </head>
 
 <body>
   <div class="wrapper">
-    <!-- ............................background_section............................. -->
     <section class="sec-1">
+      <!-- ........................... NAVIGATION BAR ............................................  -->
+
       <nav id="slide_nav" class="mynav black">
         <div class="logo"><img src="img/logo.png" alt="Logo"></div>
         <ul>
-          <li><a class="current" href="#home">Home</a></li>
+          <li><a class="current" href="#index.html" >Home</a></li>
 
-          <li><a class="current" href="#About">Our Story</a>
+          <li><a class="current" href="#">About</a>
             <ul>
-              <li><a class="inner_current" href="#chefs">Our chef's</a></li>
-              <li><a class="inner_current" href="#about">Mission</a></li>
+              <li><a class="inner_current" href="#mission">Mission</a></li>
+              <li><a class="inner_current" href="#professioanl_staff">Our chef's</a></li>
             </ul>
           </li>
 
@@ -40,18 +58,21 @@
           </li>
 
           <li><a class="current" href="#Todayspecial">Today's special</a></li>
-          <li><a class="current" href="#reservation">Reservation</a></li>
+          <li><a id="Reservation" class="current" href="#Reservation_id">Reservation</a></li>
           <li><a id="contact-us" class="active" href="#Contact Us">Contact Us</a></li>
 
         </ul>
       </nav>
+
+
+<!-- .................................BACKGROUND SECTION.......................................... -->
 
 <div class="background">
   <div class="wrap">
   <div id="slider">
     <div class="slide slide1 ">
       <div class="slide-content">
-        <div class="display_content">
+        <div class="display_content animated fadeInUp">
            <h3 class="text-white">Welcome To</h3>
            <h1 class="text-white">Hangout Restaurant</h1>
            <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
@@ -64,7 +85,7 @@
     </div>
     <div class="slide slide2 ">
       <div class="slide-content">
-        <div class="display_content">
+        <div class="display_content animated fadeInUp">
            <h3 class="text-white">Welcome To</h3>
            <h1 class="text-white">Hangout Restaurant</h1>
            <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
@@ -77,7 +98,7 @@
     </div>
     <div class="slide slide3 ">
       <div class="slide-content">
-        <div class="display_content">
+        <div class="display_content animated fadeInUp">
            <h3 class="text-white">Welcome To</h3>
            <h1 class="text-white">Hangout Restaurant</h1>
            <p class="text-white">Satisfying people’s hunger for life’s simple pleasures.<br> Share the Love.</p>
@@ -100,11 +121,15 @@
 
 </div>
 
+</section>
 
-    </section>
+<!-- .................................ABOUT US SECTION........................................-->
 
-    <section id="about" class="about_us_section">
+    <section id="mission" class="about_us_section">
       <div class="outer_about_section">
+        <div class="staff-head-content">
+            <h2>Our Mission</h2>
+      </div>
         <div class="inner_about_section1">
           <div class="about_content">
             <h2 class="mb-15">We Make Delecious Foods Since 2011.</h2>
@@ -123,10 +148,64 @@
       </div>
     </section>
 
+<!--.......................... /.testimonial_section .........................................-->
 
-  <!--........................reservation_section......................... -->
 
-  <section id="Reservation" class="reservation_section">
+    <section id="reviews" class="testimonial_section">
+      <div class="slider testimonial">
+                    <div class="testimonial_item">
+                        <p>"Family and I have eaten here several times. Love the food, the best place in town!<br> Thank you to the Chef and the cooks that prepare the delicious food."</p>
+                        <h4>-jagannath gaidhani-</h4>
+                    </div>
+                    <div class="testimonial_item">
+                        <p>"I have visited too many Indian restaurants and this is my favorite by far.
+                         <br>The food is amazing and worth the drive."</p>
+                        <h4>-Rushikesh Bhosle-</h4>
+                    </div>
+                    <div class="testimonial_item">
+                        <p>"Excellent lunch buffet. really authentic and tasty when compared to other restaurants in IN.. <br>I would go again. Pros: spicy and authentic food"</p>
+                        <h4>-Sourabh badgujar-</h4>
+                    </div>
+        
+      </div>
+    </section>
+
+  <!--........................PROFESSIONAL STUFF......................... -->
+
+  <section id="professioanl_staff" class="section-professional-staff">
+    <div class="outer-staff">
+      <div class="staff-content">
+            <h2>Our Professional staff at your service!</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>It has survived not only five centuries.</p>
+      </div>
+      <div class="inner-staff">
+        <div class="container-staff">
+          <img src="img/chef1.jpg">
+          <h3>ABC | Executive Chef</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="container-staff">
+          <img src="img/chef2.jpg">
+          <h3>ABC | Executive Chef</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="container-staff">
+          <img src="img/chef3.jpg">
+          <h3>ABC | Executive Chef</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+  <!--........................RESERVATION SECTION......................... -->
+
+  <section id="Reservation_id" class="reservation_section">
     <div class="outer_reservation_padding">
       <div class="inner_reservation_padding">
         <div class="reserv_form">
@@ -162,13 +241,13 @@
               </div>
               <div class="element_padding">
                 <select class="form-control" id="quantity" name="quantity">
-									  <option>1 Person</option>
-									  <option>2 Person</option>
-									  <option>3 Person</option>
-									  <option>4 Person</option>
-									  <option>5 Person</option>
-									  <option>6 Person</option>
-									</select>
+                    <option>1 Person</option>
+                    <option>2 Person</option>
+                    <option>3 Person</option>
+                    <option>4 Person</option>
+                    <option>5 Person</option>
+                    <option>6 Person</option>
+                  </select>
               </div>
             </div>
 
@@ -180,14 +259,23 @@
   </section>
 
 
+  <section id="food_partners" class="food_delivery">
+    <div class="slider food_company_logos">
+        <div class="logo-size"><img src="file:///home/jagannath/Website/img/food_partner/faasos.png" alt="Faasos.png"></div>
+        <div class="logo-size"><img src="file:///home/jagannath/Website/img/food_partner/foodpanda.png"></div>
+        <div class="logo-size"><img src="file:///home/jagannath/Website/img/food_partner/just-eat.png" alt="justeat.png"></div>
+        <div class="logo-size"><img src="file:///home/jagannath/Website/img/food_partner/swiggy .png"></div>
+        <div class="logo-size"><img src="file:///home/jagannath/Website/img/food_partner/zomato.png"></div>
+    </div class="logo-size">
+  </section>
 
-  <!-- ........................widget_section............................ -->
+  <!-- ........................WIDGET SECTION............................ -->
 
   <section id="subscribe" class="widget_section">
     <div class="container-1">
       <div class="class-1">
         <div class="footer_widget">
-          <h3 class="text-white">Contact information</h3>
+          <h4 class="text-white">Contact information<h4>
           <p>ADDRESS:MIT college kothrud,Pune 411038
             <br>FOR ANY QUERY: (044) 359 0173</p>
           <ul class="widget_social">
@@ -202,7 +290,7 @@
       </div>
       <div class="class-1">
         <div class="footer_widget">
-          <h3 class="text-white">Opening Hours</h3>
+          <h4 class="text-white">Opening Hours</h4>
           <p>Monday - Friday 11:30AM - 2:00PM <br>Saturday - Sunday 4:30PM - 10:00PM <br>Monday - Friday 5:30PM - 11:00PM</p>
 
         </div>
@@ -229,13 +317,13 @@
     </div>
   </section>
 
-  <!--............................ footer_section............................. -->
+  <!--............................FOOTER SECTION............................. -->
 
 
   <footer id="footer_" class="footer_section">
     <div class="container-2">
       <div class="footer-content-left-side">
-        <div class="copyright">&copy; 2018 The BrownWood Restaurant.</div>
+        <div class="copyright">&copy; 2018 The Hangout Restaurant</div>
       </div>
       <div class="footer-content-right-side">
         <ul class="footer_social">
@@ -249,9 +337,12 @@
   </footer>
 </div>
 
-  <!-- javascript files -->
-  <script type="text/javascript" src="index.js">
-  </script>
+  <!-- ................................JAVASCRIPT FILES....................................... -->
+  <script type="text/javascript" src="js/index-jquery.js"></script>
+  <script type="text/javascript" src="js/index-jscript.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
 
 
 </body>

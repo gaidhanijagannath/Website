@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Quicksand, sans-serif, "Helvetica";
+  overflow-x: hidden;
 }
 
 .image{
@@ -26,10 +27,10 @@ body {
   left: 0;
   width: 100%;
   height: 70px;
-  padding: 10px 10px;
+  padding: 5px 10px;
   box-sizing: border-box;
   z-index: 999;
-  transition:0.3s top cubic-bezier(.3, .73, .3, .74);
+  transition:1s top cubic-bezier(.3, .73, .3, .74);
 }
 .fixed{
   position: fixed;
@@ -49,9 +50,9 @@ body {
 .logo {
   position: relative;
   height: 80px;
-  padding: 15px 10px;
+  padding: 10px 10px;
   float: left;
-  margin-left: 50px;
+  margin-left: 30px;
   font-family: 'Arizonia';
   color:green;
   font-weight: bold;
@@ -77,20 +78,21 @@ nav ul li {
 
 nav ul li a {
   line-height: 70px;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   /*font-family: 'Slabo 27px', serif;*/
-  padding: 10px 20px;
-  text-decoration: none;
-  /*text-transform: uppercase;*/
+  padding: 2px 15px;
+  text-decoration: none!important;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 nav ul li ul {
-  background-color:black;
-  border-radius:0 0 8px 8px;
+  background-color:rgba(0, 0, 0,0.8);
   display: none;
   position: absolute;
   text-align: center;
+  border-radius: 0px 0px 3px 3px;
   
 }
 
@@ -104,6 +106,7 @@ nav ul li:hover ul {
 
 nav ul li a.active {
   background:#886533;
+  padding: 10px 15px;
   border-radius: 6px;
   color: #fff;
   margin-left: 5px;
@@ -112,7 +115,14 @@ nav ul li a.active {
 nav ul li a.current:hover {
   color: #cfa670;
 }
-
+nav ul li ul li{
+    width: 120px;
+    text-align: center;
+}
+nav ul li ul li a{
+  line-height:50px;
+  transition: color 0.6s ease;
+}
 nav ul li ul li a.inner_current:hover {
   color: #cfa670;
 }
@@ -154,9 +164,9 @@ nav ul li ul li a.inner_current:hover {
   to {opacity: 1}
 }*/
 
- .slide1{background-image: linear-gradient(rgba(0, 0, 0, 2.5),rgba(0, 0, 0, 0.8)),url("img/slide1.jpeg");}
- .slide2{background-image: linear-gradient(rgba(0, 0, 0, 2.5),rgba(0, 0, 0, 0.8)),url("img/slide2.jpg");}
- .slide3{background-image: linear-gradient(rgba(0, 0, 0, 2.5),rgba(0, 0, 0, 0.8)),url("img/slide3.jpg");}
+ .slide1{background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)),url("../img/slide1.jpeg");}
+ .slide2{background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)),url("../img/slide2.jpg");}
+ .slide3{background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)),url("../img/slide3.jpg");}
 
  .slide-content{
   display: flex;
@@ -225,7 +235,7 @@ nav ul li ul li a.inner_current:hover {
  .default_btn{
   font-size: 16px;
   font-family: 'Arial';
-  text-decoration: none;
+  text-decoration: none!important;
   margin: 10px; 
   padding: 13px 25px;
   background-color: none;
@@ -238,6 +248,7 @@ nav ul li ul li a.inner_current:hover {
   font-family: 'Arizonia';
   font-size:70px;
   margin: 0;
+  font-weight: bolder;
   padding: 0;
 }
 .display_content h3{
@@ -258,15 +269,26 @@ nav ul li ul li a.inner_current:hover {
   color: black;
 }
 /* ==========================================================================
-    About Us Section
+                                About Us Section
    ========================================================================== */
 
 .about_us_section{
   overflow: hidden;
   margin: 0;
   width: 100%;
-  padding: 80px 0px;
+  padding-bottom:50px;
   background-color: #fafafa;
+}
+.about_content p{
+  /*font-family: sans-serif;*/
+  font-size: 16px;
+  font-weight: bold;
+}
+.staff-head-content{ 
+  width: 100%;
+  margin-top:50px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 .outer_about_section{
   margin-left:20px;
@@ -277,6 +299,7 @@ nav ul li ul li a.inner_current:hover {
   width: 40%;
   float: left;
   padding-left:50px;
+  margin-bottom:50px;
 }
 .inner_about_section2{
   position: relative;
@@ -293,20 +316,86 @@ nav ul li ul li a.inner_current:hover {
   top: 50px;
   left: 220px;
 }
+/* ==========================================================================
+                              Testimonial Section
+   ========================================================================== */
+.testimonial_section{
+  padding:0;
+  margin: 0;
+  color: white;
+  height: 400px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)),url(../img/testimonial.jpeg);
+  opacity:.95;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+.testimonial{
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial_item{ 
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  margin-top: 150px; 
+  position: absolute;
+  text-align: center;
+
+ }
+.testimonial_item p,h4{
+  font-size: 16px;
+  font-weight: bolder;
+}
+
 
 /* ==========================================================================
-   Reservation Section
+                              Chef's Section
+   ========================================================================== */
+.section-professional-staff{ 
+  padding: 0
+  margin:0;
+ }
+ .staff-content{ 
+  width: 100%;
+  margin-top:90px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+ .inner-staff{ 
+   margin:50px 50px; 
+   position: relative;
+   display:flex;
+ }
+ .container-staff{
+  flex: 1;
+  width: 30%;
+  text-align: center;
+  justify-content: center; 
+}
+.container-staff p{ 
+  padding:0px 20px;
+  margin-top:0px;
+}
+
+/* ==========================================================================
+                              Reservation Section
    ========================================================================== */
 
 .reservation_section {
   overflow: hidden;
   background-color: #fafafa;
-  border-top: 1px solid brown;
 
 }
-.reservation_section .outer_reservation_padding{
-  height: 100%;
-  padding: 40px 0;
+.outer_reservation_padding{
+  height: 100vh;
+  padding:0px;
 }
 
 .reservation_section .inner_reservation_padding{
@@ -370,8 +459,8 @@ nav ul li ul li a.inner_current:hover {
   border: 1px solid white;
   height: 50px;
   font-size: 14px;
-  width:25%;
-  border-radius: 3px;
+  width:20%;
+  border-radius: 4px;
   transition:background 1s;
 }
 
@@ -385,12 +474,39 @@ nav ul li ul li a.inner_current:hover {
 }
 
 /* ==========================================================================
+                               food_partners_Section
+   ========================================================================== */
+.food_delivery{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+.food_company_logos{
+  flex:1;
+  width: 50%;
+  padding: 0px 100px;
+ }
+.logo-size{
+  width: 250px;
+  height: 130px;
+  position: relative;
+}
+.logo-size img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ==========================================================================
                                widget_Section
    ========================================================================== */
 
 .widget_section {
   background-color: black;
-  padding: 25px 25px;
+  padding: 40px 0px;
 }
 
 .container-1 {
@@ -400,7 +516,7 @@ nav ul li ul li a.inner_current:hover {
 
 .class-1 {
   width: 30%;
-  padding: 0px 10px;
+  padding: 10px 10px;
 }
 
 .padding {
@@ -419,7 +535,7 @@ nav ul li ul li a.inner_current:hover {
 
 .widget_social li a {
   color: #777;
-  font-size: 12px;
+  font-size: 10px;
   margin-right: 20px;
 }
 
@@ -431,13 +547,17 @@ nav ul li ul li a.inner_current:hover {
   color: #fff;
 }
 
-.footer_widget h3 {
-  font-weight: bold;
+.footer_widget h4 {
+  font-weight: bolder;
 }
 
 .footer_widget p {
+  font-size: 16px;
   padding: 5px 0px;
+  font-weight: bold;
   color: #777;
+  line-height: 20px;
+  margin-top: 20px;
 }
 
 .footer_widget p a {
@@ -468,6 +588,7 @@ nav ul li ul li a.inner_current:hover {
 
 .container-2 {
   display: flex;
+  margin-right: 40px;
 }
 
 .footer-content-left-side {
